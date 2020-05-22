@@ -21,30 +21,29 @@ add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner
 apt update
 
 # Install build utils
-apt install htop make gcc g++ git build-essential 
+apt install -y htop make gcc g++ git build-essential 
 
 # Install adobe flash player
-apt install adobe-flashplugin browser-plugin-freshplayer-pepperflash
+apt install -y adobe-flashplugin browser-plugin-freshplayer-pepperflash
 
 # Install adobe reader alternative
-apt install okular
+apt install -y okular
 
 # Install anaconda
-apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+apt install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 wget $ANACONDA_URL -O /tmp/install/anacondaInstaller.sh
 chmod 0755 /tmp/install/anacondaInstaller.sh
-echo -n 'Enter a username to install anaconda for: '
-read username
-runuser -l $username -c 'sh /tmp/anacondaInstaller.sh'
+runuser -l $username -c 'sh /tmp/install/anacondaInstaller.sh'
 rm /tmp/install/anacondaInstaller
 
 # Install arduino
 wget $ARDUINO_URL -O /tmp/install/arduino.tar.xz
-tar xf /tmp/install/arduino.tar.xz
-runuser -l $username -c 'sh /tmp/install/arduino*/install.sh'
+mkdir /tmp/install/arduino
+tar xf /tmp/install/arduino.tar.xz -C /tmp/install/arduino/
+runuser -l $username -c 'sh /tmp/install/arduino/install.sh'
 usermod -aG $TTY_GROUP $username
-rm -rf /tmp/install/arduino*/*
-rmdir /tmp/install/arduino*
+rm -rf /tmp/install/arduino/*
+rmdir /tmp/install/arduino
 rm /tmp/install/arduino.tar.xz
 
 # Install chromium
