@@ -13,10 +13,10 @@ Select software has additional information in directories with the same name as 
 | Adobe Flash Player      | Yes         | Added ppa                                                         |
 | Adobe Reader            | Alternative | Any pdf reader should work                                        |
 | Anaconda                | Yes         | Available from anaconda                                           |
-| Arduino IDE             | Yes         | In repo, also available from arduino                              |
+| Arduino IDE             | Yes         | Available from arduino                                            |
 | Bash                    | Yes         | It's bash                                                         |
 | Chrome                  | Yes         | Chromium in default repo, chrome needs a ppa                      |
-| CodeWarrior             | No          | Probably no good alternative                                      |
+| CodeWarrior             | No          | GCC maybe?                                                        |
 | Crackstation dictionary | Yes         | Available online                                                  |
 | cseora                  | Unknown     | couldn't find any info... :(                                      |
 | DeepFreeze              | Alternative | overlayroot maybe?                                                |
@@ -25,7 +25,7 @@ Select software has additional information in directories with the same name as 
 | Firefox                 | Yes         | Installed by default                                              |
 | Git+GitBash             | Yes         | In default repo                                                   |
 | GLUT                    | Yes         | libglut or some such in the default repo                          |
-| Hashcat                 | Yes         | Build from source, available on github                            |
+| Hashcat                 | Yes         | In default repo                                                   |
 | Hashcat-utils           | Yes         | Build from source, available on github                            |
 | HCS12 CPU Manual        | Yes         | PDF, available in multiple places                                 |
 | IDLE                    | Yes         | In default repo, but it's _cancer_                                |
