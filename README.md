@@ -38,6 +38,7 @@ Select software has additional information in directories with the same name as 
 | Matlab                  | Yes         | Download available from Matlab. See note on IDLE                  |
 | Microsoft Office        | Alternative | LibreOffice, installed by default                                 |
 | MinGW - GCC             | Alternative | Normal gcc is in default repo                                     |
+| MobaXterm               | Unecessary  | It's linux                                                        |
 | Netbeans                | Yes         | Available in default repo                                         |
 | NetSupport              | Maybe       | Instructions from netsupport employee. No official support        |
 | Notepad++               | Kinda       | In the snap store. Atom and gedit are possible alternatives       |
